@@ -6,6 +6,10 @@ import lombok.*;
 @AllArgsConstructor
 @Setter
 @Getter
-@ToString ng
+@ToString
 public class Drink {
+
+    private String name;
+    private int price;
+    private int amount;
 }
