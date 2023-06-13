@@ -20,7 +20,17 @@ public class DrinkDAO {
 
     public Drink findMemberBySequence(String name) {
 
-        return  drinkMap.get(name);
+        return drinkMap.get(name);
+    }
+
+    public int changeDrink(String name, int money) {
+
+        int drinkPrice = drinkMap.get(name).getPrice();
+        if(drinkPrice > money) {
+            throw new IllegalArgumentException("돈이 부족합니다");
+        }
+
+        return money - drinkPrice;
     }
 
     /* 재고 조회 기능 */
