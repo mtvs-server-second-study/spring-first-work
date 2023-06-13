@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringJUnitConfig(classes = {ContextConfiguration.class})
@@ -45,7 +44,6 @@ public class DrinkDAOTests {
         //then
         assertEquals(1000, changeDrink);
     }
-}
 
     @DisplayName("음료이름을 입력하면 그에 해당하는 재고가 출력되는지?")
     @Test
